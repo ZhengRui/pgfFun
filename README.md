@@ -2,4 +2,4 @@
 
 ##### This is just a collection of code snippets (with result shown after each code block) from the first 6 chapters from [pgfmanual2012](http://www.texample.net/media/pgf/builds/pgfmanualCVS2012-11-04.pdf)
 
-[Example1](https://github.com/ZhengRui/pgfFun/blob/master/ex1.png)
+[Example1](ex1.png?raw=true)
