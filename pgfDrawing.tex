@@ -1,0 +1,74 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{picins}
+\usepackage{titling}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{tikz}
+\usetikzlibrary{intersections, positioning, arrows, decorations.pathmorphing, backgrounds, fit, petri, calc, through, trees, mindmap, shadows, shapes.symbols, calendar}
+% xetex and xelatex doesn't support fadings effect, pdflatex has good support
+\usepackage{fancyvrb,color}
+
+\definecolor{BGColor}{rgb}{0.133,0.702,0.514}
+\newenvironment{cverbatim}
+ {\SaveVerbatim{cverb}}
+ {\endSaveVerbatim
+  \flushleft\fboxrule=0pt\fboxsep=.5em
+  \colorbox{BGColor}{\BUseVerbatim{cverb}}%
+  \endflushleft
+}
+\newenvironment{lcverbatim}
+ {\SaveVerbatim{cverb}}
+ {\endSaveVerbatim
+  \flushleft\fboxrule=0pt\fboxsep=.5em
+  \colorbox{BGColor}{%
+    \makebox[\dimexpr\linewidth-2\fboxsep][l]{\BUseVerbatim{cverb}}%
+  }
+  \endflushleft
+}
+
+% get rid of underfullbox badness warning of fit
+\tikzset{every fit/.append style=text badly centered}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+\usepackage{ulem}
+
+\geometry{
+ % body={6.5in, 8.5in},
+  left=0.8in,
+  right=0.8in,
+  top=0.5in,
+  bottom=0.8in
+}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+\setlength{\droptitle}{-4em}
+\title{\textbf{Tex Drawing using PGF}}
+\author{Zheng Rui}
+\date{\today}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{8pt}
+
+\begin{document}
+\maketitle
+
+Fun starts from here:
+
+\tiny
+
+\input{./sections/sec1.tex}
+\input{./sections/sec2.tex}
+\input{./sections/sec3.tex}
+\input{./sections/sec4.tex}
+
+
+\end{document}
